@@ -1,0 +1,61 @@
+
+
+
+
+#incomplete-tasks {
+  background: "red";
+}
+
+.main-content {
+  margin-top: 30px;
+}
+
+
+
+
+ul.no-bullets {
+    list-style-type: none;
+   
+    padding: 15px;
+    margin-top: 5px ;
+  }
+ul li.taskBorder {
+    /* border-style: solid;
+    border-width: 2px ; */
+    margin-top: 20px ;
+    padding: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
+
+
+}
+
+.edit, .completed {
+  margin-right: 5px;
+}
+
+.red {
+    height: 25px;
+  width: 25px;
+  background-color: #FA5F55;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.green {
+    height: 25px;
+  width: 25px;
+  background-color: #50C878;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+.yellow {
+    height: 25px;
+  width: 25px;
+  background-color: #FAFA33;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
