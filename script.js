@@ -3,6 +3,48 @@ let form = document.querySelector("form")
 let incompleteTasks = document.querySelector("#incomplete-tasks ul");
 let completeTasks = document.querySelector("#complete-tasks ul");
 
+let lightBtn = document.querySelector(".light");
+    let darkBtn = document.querySelector(".dark");
+
+
+
+let light = true;
+lightBtn.style.display = "none";
+        darkBtn.style.display = "block";
+
+function lightDark() {
+    let body = document.querySelector("#top");
+    let h1 = document.querySelector("h1");
+    let input = document.querySelector("input");
+    let incompleteTask = document.querySelector("#incomplete-tasks");
+    let completeTask = document.querySelector("#complete-tasks");
+    let lightBtn = document.querySelector(".light");
+    let darkBtn = document.querySelector(".dark");
+
+    if (light) {
+        body.style.backgroundColor = "#121212";
+        h1.style.color = "#fff";
+        incompleteTask.style.backgroundColor = "#cd97ef";
+        completeTask.style.backgroundColor = "#cd97ef";
+        input.style.backgroundColor = "#434f4d";
+        darkBtn.style.display = "none";
+        lightBtn.style.display = "block";
+        light = false;
+    }
+    else {
+        body.style.backgroundColor = "#fff";
+        h1.style.color = "black";
+        incompleteTask.style.backgroundColor = "#f5f5f5";
+        completeTask.style.backgroundColor = "#f5f5f5";
+        input.style.backgroundColor = "#fff"
+        
+
+        lightBtn.style.display = "none";
+        darkBtn.style.display = "block";
+        light = true;
+    }
+}
+
 
 let createTask = function (task) {
     let createList = document.createElement("li");
@@ -18,8 +60,8 @@ let createTask = function (task) {
     spanGreen.className ="green";
     spanYellow.className ="yellow";
 
-    editBtn.classList.add ("edit", "btn", "btn-primary");
-    completeBtn.classList.add ("completed", "btn", "btn-primary");
+    editBtn.classList.add ("edit", "btn", "btn-sm","btn-primary");
+    completeBtn.classList.add ("completed", "btn","btn-sm", "btn-primary");
     
     paragraph.innerText = task;
     editBtn.innerText = "Edit";
@@ -51,7 +93,7 @@ let editFunction = function () {
     input.value= text.innerText;
     taskItem.replaceChild(input, text);
     doneButton.innerText = "Done"
-    doneButton.classList.add ("done", "btn", "btn-primary");
+    doneButton.classList.add ("done", "btn", "btn-sm", "btn-primary");
     taskItem.appendChild(doneButton);
 
 
@@ -108,7 +150,7 @@ let completedFunction = function () {
     let taskItem = this.parentNode;
     let deleteBtn = document.createElement("button");
     deleteBtn.innerText = "Delete";
-    deleteBtn.classList.add ("delete", "btn", "btn-primary");
+    deleteBtn.classList.add ("delete", "btn","btn-sm", "btn-primary");
     taskItem.appendChild(deleteBtn);
 
     let spanRed = taskItem.querySelector(".red");
