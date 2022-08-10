@@ -12,6 +12,9 @@ let light = true;
 lightBtn.style.display = "none";
         darkBtn.style.display = "block";
 
+lightBtn.addEventListener("click", lightDark);
+darkBtn.addEventListener("click", lightDark);
+
 function lightDark() {
     let body = document.querySelector("#top");
     let h1 = document.querySelector("h1");
